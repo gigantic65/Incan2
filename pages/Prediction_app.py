@@ -3618,8 +3618,9 @@ def app():
             
     
             para7 = []
-            for i in range(6000):
+            for i in range(5000):
                 para5 = []
+                
                 for col in New_x2.columns:
                     New_x2[col] = 0.0
                                        
@@ -3631,8 +3632,23 @@ def app():
                         New_x2[col] = 1.0
                                                       
                     para5.append(float(New_x2[col].values))
+                    
                   
-                para7.append(para5)
+                if selected2 =='Base_A': 
+                    if sum(para5) < 520.0:
+                        num = num+1
+                        para7.append(para5)                        
+                    
+                    
+                if selected2 =='Base_B': 
+                    if sum(para5) < 780.0:
+                        num = num+1
+                        para7.append(para5)               
+                    
+                if selected2 =='Base_C':    
+                    if sum(para5) < 1110.0 and sum(para5) > 940.0:
+                        num = num+1
+                        para7.append(para5)
                        
     
             para7 = pd.DataFrame(para7, columns=X.columns) 
