@@ -2604,7 +2604,7 @@ def app():
             
             #st.write(para4)
                    
-            df_min = para4.head(10)
+            df_min = para4.head(15)
             
             #st.write(df_min)
             
