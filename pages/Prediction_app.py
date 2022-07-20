@@ -3148,7 +3148,7 @@ def app():
     
                 para81['Delta_E'][i] = ((Target_v['Target_L'] - predictions4['Pred_L'][i])**2+(Target_v['Target_a'] - predictions4['Pred_a'][i])**2+(Target_v['Target_b'] - predictions4['Pred_b'][i])**2)**0.5 
             
-            para8.sort_values(by='Delta_E', ascending=True, inplace =True)
+            para81.sort_values(by='Delta_E', ascending=True, inplace =True)
             
             para81 = para81.head(1)
             para818 = para7[1:2]
@@ -3181,7 +3181,7 @@ def app():
     
                 para82['Delta_E'][i] = ((Target_v['Target_L'] - predictions4['Pred_L'][i])**2+(Target_v['Target_a'] - predictions4['Pred_a'][i])**2+(Target_v['Target_b'] - predictions4['Pred_b'][i])**2)**0.5 
             
-            para8.sort_values(by='Delta_E', ascending=True, inplace =True)
+            para82.sort_values(by='Delta_E', ascending=True, inplace =True)
             
             para82 = para82.head(1)
             para828 = para7[2:3]
